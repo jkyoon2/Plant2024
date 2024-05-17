@@ -5,7 +5,7 @@ This project aims to predict plant traits using deep learning models. The code i
 ## Directory Structure
 
 Swin_22k/
-├── config.py
+├── config.py \
 ├── dataset.py
 ├── evaluate.py
 ├── logging_config.py
@@ -77,7 +77,7 @@ Logging is set up using the `logging_config.py` file. Logs are printed to the co
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Kaggle - see the [LICENSE](https://www.kaggle.com/competitions/planttraits2024) file for details.
 
 ### Detailed File Descriptions
 
