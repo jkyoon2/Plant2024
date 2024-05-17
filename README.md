@@ -4,15 +4,15 @@ This project aims to predict plant traits using deep learning models. The code i
 
 ## Directory Structure
 
-Swin_22k/
+Swin_22k/ \
 ├── config.py \
-├── dataset.py
-├── evaluate.py
-├── logging_config.py
-├── main.py
-├── model.py
-├── requirements.txt
-└── train.py
+├── dataset.py \
+├── evaluate.py \
+├── logging_config.py \
+├── main.py \
+├── model.py \
+├── requirements.txt \
+└── train.py \
 
 
 ## Setup
