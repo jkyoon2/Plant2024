@@ -12,7 +12,7 @@ Swin_22k/ \
 ├── main.py \
 ├── model.py \
 ├── requirements.txt \
-└── train.py \
+└── train.py 
 
 
 ## Setup
