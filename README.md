@@ -107,8 +107,6 @@ Lists all the dependencies required to run the project. This includes PyTorch, A
 
 ---
 
-Make sure to replace `yourusername` with your actual GitHub username in the clone URL.
-
 ### Adding the `requirements.txt` file
 Ensure your `requirements.txt` includes all the necessary dependencies:
 
