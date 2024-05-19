@@ -16,6 +16,7 @@ from albumentations.pytorch import ToTensorV2
 import psutil
 from torch import nn
 import torchmetrics
+import gc
 
 def train():
     # Initialize logging
@@ -84,6 +85,11 @@ def train():
         TEST_TRANSFORMS,
     )
 
+    
+    # 메모리 초기화
+    gc.collect()
+    torch.cuda.empty_cache()
+
     # Define model, optimizer, and scheduler
     model = Model().to('cuda')
     optimizer = AdamW(model.parameters(), lr=CONFIG.LR_MAX, weight_decay=CONFIG.WEIGHT_DECAY)
@@ -115,6 +121,10 @@ def train():
 
             if (step + 1) % 100 == 0:
                 logging.info(f'EPOCH {epoch + 1}: Step {step + 1} Loss: {loss.item()} MAE: {mae_metric.compute().item()} R²: {r2_metric.compute().item()}')
+
+        # 에포크가 끝난 후 메모리 해제
+        gc.collect()
+        torch.cuda.empty_cache()
 
     # Save the model
     torch.save(model.state_dict(), CONFIG.MODEL_NAME)

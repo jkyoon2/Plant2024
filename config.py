@@ -1,19 +1,19 @@
 import os
 
 class Config():
-    MODEL_NAME = 'swin_22k_epoch10.pth'
+    MODEL_NAME = 'swin_22k_epoch6_sam.pth'
     TRAIN_CSV_PATH = '/root/.dataset/train.csv'
     TEST_CSV_PATH = '/root/.dataset/test.csv'
-    TRAIN_IMAGE_PATH = '/root/.dataset/train_images'
-    TEST_IMAGE_PATH = '/root/.dataset/test_images'
+    TRAIN_IMAGE_PATH = '/root/.dataset_sam/segmented_images'
+    TEST_IMAGE_PATH = '/root/.dataset_sam/segmented_images_test'
     IMAGE_SIZE = 384
     BACKBONE = 'swin_large_patch4_window12_384.ms_in22k_ft_in1k'
     TARGET_COLUMNS = ['X4_mean', 'X11_mean', 'X18_mean', 'X50_mean', 'X26_mean', 'X3112_mean']
     N_TARGETS = len(TARGET_COLUMNS)
-    BATCH_SIZE = 4
+    BATCH_SIZE = 10
     LR_MAX = 1e-4
     WEIGHT_DECAY = 0.01
-    N_EPOCHS = 10
+    N_EPOCHS = 6
     TRAIN_MODEL = True
     IS_INTERACTIVE = os.environ.get('KAGGLE_KERNEL_RUN_TYPE') == 'Interactive'
     LOG_FEATURES = ['X4_mean', 'X11_mean', 'X18_mean', 'X50_mean', 'X26_mean', 'X3112_mean']
