@@ -1,0 +1,32 @@
+2024-05-22 10:49:11,594:INFO:Soft dependency imported: cuml: 22.12.0
+2024-05-22 10:49:45,995:INFO:Soft dependency imported: cuml: 22.12.0
+2024-05-22 10:49:45,996:INFO:Soft dependency imported: cuml: 22.12.0
+2024-05-22 10:49:45,996:INFO:Soft dependency imported: cuml: 22.12.0
+2024-05-22 10:50:00,197:WARNING:model.py:63: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[new_col_name] = df[cols].mean(axis=1)
+
+2024-05-22 10:50:01,890:INFO:PyCaret RegressionExperiment
+2024-05-22 10:50:01,890:INFO:Logging name: species_model_X4_mean_preprocessed_species_1_2_3_4_5_6_7_independent_Unnamed: 0_id_WORLDCLIM_BIO1_annual_mean_temperature_WORLDCLIM_BIO12_annual_precipitation_SOIL_clay_0.5cm_mean_0.01_deg_SOIL_sand_0.5cm_mean_0.01_deg_SOIL_silt_0.5cm_mean_0.01_deg_prediction_label_prediction_score_soc_average_MODIS_1__mean_MODIS_2__mean_MODIS_5__mean_VOD_C_mean_VOD_X_mean_VOD_Ku_mean
+2024-05-22 10:50:01,890:INFO:ML Usecase: MLUsecase.REGRESSION
+2024-05-22 10:50:01,890:INFO:version 3.2.0
+2024-05-22 10:50:01,890:INFO:Initializing setup()
+2024-05-22 10:50:01,890:INFO:self.USI: a758
+2024-05-22 10:50:01,890:INFO:self._variable_keys: {'memory', 'X', 'seed', 'idx', 'target_param', '_ml_usecase', 'fold_generator', 'log_plots_param', 'html_param', 'exp_id', 'logging_param', 'pipeline', 'transform_target_param', 'n_jobs_param', 'gpu_n_jobs_param', 'data', 'fold_groups_param', 'gpu_param', 'X_train', 'y', 'y_test', 'fold_shuffle_param', 'X_test', 'exp_name_log', 'y_train', '_available_plots', 'USI'}
+2024-05-22 10:50:01,890:INFO:Checking environment
+2024-05-22 10:50:01,890:INFO:python_version: 3.8.10
+2024-05-22 10:50:01,890:INFO:python_build: ('default', 'Nov 14 2022 12:59:47')
+2024-05-22 10:50:01,890:INFO:machine: x86_64
+2024-05-22 10:50:02,189:INFO:platform: Linux-5.4.0-176-generic-x86_64-with-glibc2.29
+2024-05-22 10:50:02,190:INFO:Memory: svmem(total=540940505088, available=520421040128, percent=3.8, used=15917133824, free=271725797376, active=83389112320, inactive=171669196800, buffers=2233528320, cached=251064045568, shared=1093021696, slab=10854150144)
+2024-05-22 10:50:02,292:INFO:Physical Core: 64
+2024-05-22 10:50:02,292:INFO:Logical Core: 128
+2024-05-22 10:50:02,292:INFO:Checking libraries
+2024-05-22 10:50:02,292:INFO:System:
+2024-05-22 10:50:02,292:INFO:    python: 3.8.10 (default, Nov 14 2022, 12:59:47)  [GCC 9.4.0]
+2024-05-22 10:50:02,292:INFO:executable: /usr/bin/python
+2024-05-22 10:50:02,292:INFO:   machine: Linux-5.4.0-176-generic-x86_64-with-glibc2.29
+2024-05-22 10:50:02,292:INFO:PyCaret required dependencies:
