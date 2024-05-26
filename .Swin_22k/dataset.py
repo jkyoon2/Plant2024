@@ -1,14 +1,3 @@
-import pandas as pd
-import numpy as np
-import imageio.v3 as imageio
-import albumentations as A
-from albumentations.pytorch import ToTensorV2
-from torch.utils.data import Dataset, DataLoader
-from config import CONFIG
-from tqdm import tqdm
-tqdm.pandas()  # Add this line to enable the progress_apply method
-
-
 import os
 import pandas as pd
 import numpy as np
@@ -18,7 +7,7 @@ from albumentations.pytorch import ToTensorV2
 from torch.utils.data import Dataset, DataLoader
 from config import CONFIG
 from tqdm import tqdm
-tqdm.pandas()  # Add this line to enable the progress_apply method
+tqdm.pandas()
 
 def load_data():
     train_pickle_path = 'train.pkl'
