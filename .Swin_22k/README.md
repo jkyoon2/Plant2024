@@ -35,7 +35,7 @@ Ensure you have the following installed:
     pip install -r requirements.txt
     ```
 
-## Error Handling
+### Error Handling
 
 ### Error: `AttributeError: module 'cv2.dnn' has no attribute 'DictValue'`
 This error can occur due to version incompatibility of OpenCV. To resolve this issue:
