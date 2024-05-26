@@ -2,7 +2,6 @@ import os
 from train import train
 from evaluate import evaluate
 from config import CONFIG
-from tendo import singleton
 import psutil
 import os
 

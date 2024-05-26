@@ -1,11 +1,11 @@
 import os
 
 class Config():
-    MODEL_NAME = 'swin_22k_epoch6_sam.pth'
-    TRAIN_CSV_PATH = '/root/.dataset/train.csv'
-    TEST_CSV_PATH = '/root/.dataset/test.csv'
-    TRAIN_IMAGE_PATH = '/root/.dataset_sam/segmented_images'
-    TEST_IMAGE_PATH = '/root/.dataset_sam/segmented_images_test'
+    MODEL_NAME = '' # model path
+    TRAIN_CSV_PATH = '' # train.csv path
+    TEST_CSV_PATH = '' # test.csv path
+    TRAIN_IMAGE_PATH = '' # train_image path
+    TEST_IMAGE_PATH = '' # test_image path
     IMAGE_SIZE = 384
     BACKBONE = 'swin_large_patch4_window12_384.ms_in22k_ft_in1k'
     TARGET_COLUMNS = ['X4_mean', 'X11_mean', 'X18_mean', 'X50_mean', 'X26_mean', 'X3112_mean']

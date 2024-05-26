@@ -93,7 +93,10 @@ def train():
     # Define model, optimizer, and scheduler
     model = Model().to('cuda')
     optimizer = AdamW(model.parameters(), lr=CONFIG.LR_MAX, weight_decay=CONFIG.WEIGHT_DECAY)
-    lr_scheduler = OneCycleLR(optimizer, max_lr=CONFIG.LR_MAX, total_steps=CONFIG.N_STEPS, pct_start=0.1, anneal_strategy='cos', div_factor=1e1, final_div_factor=1e1)
+
+    # Calculate total steps
+    total_steps = len(train_dataloader) * CONFIG.N_EPOCHS
+    lr_scheduler = OneCycleLR(optimizer, max_lr=CONFIG.LR_MAX, total_steps=total_steps, pct_start=0.1, anneal_strategy='cos', div_factor=1e1, final_div_factor=1e1)
 
     # Initialize metrics
     mae_metric = torchmetrics.MeanAbsoluteError().to('cuda')
