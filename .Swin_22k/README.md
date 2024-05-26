@@ -1,6 +1,6 @@
 # Kaggle Plant Traits 2024
 
-This project aims to predict plant traits using deep learning models. The code is designed to run on a server environment, using PyTorch and various other libraries. The project includes data loading, model training, evaluation, and logging functionalities.
+This project aims to predict plant traits using plant images and ancillary tabular datas. The code is designed to run on a server environment, using PyTorch and various other libraries. The project includes data loading, model training, evaluation, and logging functionalities.
 
 ## Directory Structure
 
@@ -20,8 +20,7 @@ Swin_22k/ \
 ### Prerequisites
 
 Ensure you have the following installed:
-- Python 3.10 or higher
-- Virtualenv (recommended)
+- Python 3.8 or higher
 
 ### Installation
 
@@ -31,15 +30,28 @@ Ensure you have the following installed:
     cd Plant2024/.Swin_22k
     ```
 
-2. **Create a virtual environment and activate it:**
-    ```sh
-    python -m venv env
-    source env/bin/activate  # On Windows, use `env\Scripts\activate`
-    ```
-
-3. **Install the required packages:**
+2. **Install the required packages:**
     ```sh
     pip install -r requirements.txt
+    ```
+
+## Error Handling
+
+### Error: `AttributeError: module 'cv2.dnn' has no attribute 'DictValue'`
+This error can occur due to version incompatibility of OpenCV. To resolve this issue:
+
+1. Check your OpenCV version:
+    ```python
+    import cv2
+    print(cv2.__version__)
+    ```
+2. Update the system package list:
+    ```bash
+    apt-get update
+    ```
+3. Upgrade OpenCV if it's outdated:
+    ```bash
+    pip3 install --upgrade opencv-python
     ```
 
 ### Dataset Preparation
@@ -47,7 +59,7 @@ Ensure you have the following installed:
 Ensure that the dataset is placed in the correct directory structure. If you have `train.pkl` and `test.pkl` already created, ensure they are in the `.swin` directory.
 
 If you need to generate `train.pkl` and `test.pkl`:
-1. Place your CSV files and images in the respective paths specified in `dataset.py`.
+1. Place your CSV files and images in the respective paths specified in `config.py`.
 
 ### Running the Project
 
@@ -123,5 +135,5 @@ torchmetrics
 tqdm
 scikit-learn
 psutil
-opencv-python-headless==4.5.5.62
+opencv-python-4.8.0.74
 
