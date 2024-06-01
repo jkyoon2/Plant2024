@@ -7,9 +7,11 @@ class Config():
     TRAIN_IMAGE_PATH = '' # train_image path
     TEST_IMAGE_PATH = '' # test_image path
     IMAGE_SIZE = 384
-    BACKBONE = 'swin_large_patch4_window12_384.ms_in22k_ft_in1k'
+    BACKBONE = 'swin_large_patch4_window12_384.ms_in22k_ft_in1k' # backbone model
     TARGET_COLUMNS = ['X4_mean', 'X11_mean', 'X18_mean', 'X50_mean', 'X26_mean', 'X3112_mean']
     N_TARGETS = len(TARGET_COLUMNS)
+    Lower_Quantile = 0.005 #좌측 이상치
+    Upper_Quantile = 0.985 #우측 이상치
     BATCH_SIZE = 10
     LR_MAX = 1e-4
     WEIGHT_DECAY = 0.01
