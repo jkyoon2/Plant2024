@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+imageio
+torch
+torchvision
+timm
+albumentations
+torchmetrics
+tqdm
+scikit-learn
+psutil
+opencv-python==4.8.0.74
