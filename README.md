@@ -34,30 +34,30 @@ The tabular data is divided into four main categories: soil, climate, MODIS, and
 - **Soil Variables**:
     - We focus on the key soil texture variables: CLAY, SILT, and SAND. To enhance interpretability, we categorized these using the **USDA Soil Texture Triangle**, classifying them into 13 distinct texture types based on their relative proportions. This approach allows us to capture soil characteristics more effectively in relation to plant traits.
         
-    <img src="assets/USDA-soil-texture-triangle.png" alt="USDA Soil Texture Triangle" width="500"/>        
+        <img src="assets/USDA-soil-texture-triangle.png" alt="USDA Soil Texture Triangle" width="500"/>        
 - **Climate and Precipitation**:
     - For the climate variables, we applied **Whittaker’s Biome Classification** to categorize different climate zones. Using mean annual temperature and precipitation values, we classified the data into nine distinct biome categories (e.g., temperate, tropical, polar, etc.).
         
-    <img src="assets/whittaker-biome-classification.png" alt="Whittaker's Biome Classification" width="500"/>
+        <img src="assets/whittaker-biome-classification.png" alt="Whittaker's Biome Classification" width="400"/>
 
-    <img src="assets/climate-classification.png" alt="Climate Classification" width="500"/>
+        <img src="assets/climate-classification.png" alt="Climate Classification" width="400"/>
         
 - **Specific Leaf Area (SSD)**:
     - Unlike other traits such as Plant Height and Seed Mass, SSD (Specific Stem Density) showed a distinct distribution pattern. We used domain knowledge and methods such as EM-Method and K-means clustering to classify woody/non-woody species based on SSD.
         
-    <img src="assets/distribution-by-traits.png" alt="Distribution by Traits" width="500"/>
+        <img src="assets/distribution-by-traits.png" alt="Distribution by Traits" width="400"/>
         
 - **MODIS & VOD Time Series**:
     - We used a TorchCoder-based LSTM Autoencoder to embed the time-series data (2000–2020 monthly averages for each wavelength) into a more manageable format, reducing 96 columns into eight essential features.
         
-    <img src="assets/modis-vod.png" alt="MODIS & VOD Time Series" width="500"/>
+        <img src="assets/modis-vod.png" alt="MODIS & VOD Time Series" width="400"/>
         
 
 ### **SMT Data (Species Metadata)**:
 
 - We utilized the iNaturalist database as the source for original species classification, enabling us to merge original TRY Dataset species data with the Kaggle dataset for better species categorization.
     
-    <img src="assets/database-logo.png" alt="iNaturalist Database" width="500"/>
+    <img src="assets/database-logo.png" alt="iNaturalist Database" width="250"/>
     
 - **Species Classification Logic**:
     - Using domain knowledge, we classified species based on factors such as Woodiness, Growth Form, and Phylogenetic Group. Clustering patterns were observed and labels grouped accordingly.
@@ -68,9 +68,9 @@ The tabular data is divided into four main categories: soil, climate, MODIS, and
 
 - We trained a LightGBM classification model to predict species using six traits as features. The final model achieved an accuracy of ~0.95. We then used this model’s predicted labels and scores as input features for predicting plant traits.
     
-    <img src="assets/species-classification-utilization-overview.png" alt="Species Classification Overview" width="500"/>
+    <img src="assets/species-classification-utilization-overview.png" alt="Species Classification Overview" width="400"/>
 
-    <img src="assets/species-classification-model.png" alt="Species Classification Model" width="500"/>
+    <img src="assets/species-classification-model.png" alt="Species Classification Model" width="400"/>
     
 
 ### 2. **Image Processing and Modeling**
