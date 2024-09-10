@@ -68,7 +68,7 @@ The tabular data is divided into four main categories: soil, climate, MODIS, and
 
 - We trained a LightGBM classification model to predict species using six traits as features. The final model achieved an accuracy of ~0.95. We then used this model’s predicted labels and scores as input features for predicting plant traits.
     
-    <img src="assets/species-classification-overview.png" alt="Species Classification Overview" width="500"/>
+    <img src="assets/species-classification-utilization-overview.png" alt="Species Classification Overview" width="500"/>
 
     <img src="assets/species-classification-model.png" alt="Species Classification Model" width="500"/>
     
