@@ -1,5 +1,8 @@
 # Kaggle PlantTraits2024 Competition 
 
+<img src="https://img.shields.io/badge/PyTorch-#EE4C2C?style=for-the-badge&logo=Pytorch&logoColor=white">
+<img src="https://img.shields.io/badge/Hugging Face-#FFD21E?style=for-the-badge&logo=Hugging Face&logoColor=white">
+
 ## Overview
 
 ### Goal:
