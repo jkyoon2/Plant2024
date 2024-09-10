@@ -1,7 +1,9 @@
-# Kaggle PlantTraits2024 Competition 
+# [Kaggle PlantTraits2024 Competition](https://www.kaggle.com/competitions/planttraits2024)
 
+<div>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=Pytorch&logoColor=white">
 <img src="https://img.shields.io/badge/Hugging Face-FFD21E?style=for-the-badge&logo=Hugging Face&logoColor=white">
+</div>
 
 ## Overview
 
@@ -58,7 +60,7 @@ The tabular data is divided into four main categories: soil, climate, MODIS, and
 
 ### **SMT Data (Species Metadata)**:
 
-- We utilized the iNaturalist database as the source for original species classification, enabling us to merge original TRY Dataset species data with the Kaggle dataset for better species categorization.
+- We utilized the [iNaturalist database](https://www.inaturalist.org/) as the source for original species classification, enabling us to merge original [TRY Dataset](https://www.try-db.org/TryWeb/Home.php) species data with the Kaggle dataset for better species categorization.
     
     <img src="assets/database-logo.png" alt="iNaturalist Database" width="250"/>
     
